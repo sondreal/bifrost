@@ -1,6 +1,5 @@
 # test_models.py
 
-from re import A
 import pytest
 import responses 
 
