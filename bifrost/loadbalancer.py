@@ -27,3 +27,12 @@ def router():
             response = requests.get(f'http://{random.choice(entry["servers"])}')
             return response.content, response.status_code
     return 'Not Found', 404
+
+@loadbalancer.route('/<path>')
+def path_router(path):
+    for entry in config['paths']:
+        if ('/' + path) == entry['path']:
+            response = requests.get(f'http://{random.choice(entry["servers"])}')
+            return response.content, response.status_code
+    return 'Not Found', 404
+

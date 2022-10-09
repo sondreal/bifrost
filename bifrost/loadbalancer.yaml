@@ -9,3 +9,12 @@ hosts:
     servers:
       - localhost:9091
       - localhost:9092
+paths:
+  - path: /blue
+    servers:
+      - localhost:8081
+      - localhost:8082
+  - path: /green
+    servers:
+      - localhost:9091
+      - localhost:9092
