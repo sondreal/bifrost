@@ -20,3 +20,16 @@ def test_host_routing_notfound(client):
     result = client.get('(/', headers={'Host': 'www.notfound.no'})
     assert b'Not Found' in result.data
     assert 404 == result.status_code
+
+def test_path_routing_blue(client):
+    result = client.get('/blue')
+    assert b'This is the blue application server' in result.data
+
+def test_path_routing_green(client):
+    result = client.get('/green')
+    assert b'This is the green application server' in result.data
+
+def test_path_routing_notfound(client):
+    result = client.get('/notfound')
+    assert b'Not Found' in result.data
+    assert 404 == result.status_code
