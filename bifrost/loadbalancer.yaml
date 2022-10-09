@@ -1,0 +1,11 @@
+# loadbalancer.yaml
+
+hosts:
+  - host: www.blue.no
+    servers:
+      - localhost:8081
+      - localhost:8082
+  - host: www.green.no
+    servers:
+      - localhost:9091
+      - localhost:9092
