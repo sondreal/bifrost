@@ -1,6 +1,6 @@
 import pytest
 
-from loadbalancer import loadbalancer
+from bifrost.loadbalancer import loadbalancer
 
 @pytest.fixture
 def client():
