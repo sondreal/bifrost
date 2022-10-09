@@ -2,6 +2,7 @@ import pytest
 
 from bifrost.loadbalancer import loadbalancer
 
+
 @pytest.fixture
 def client():
     with loadbalancer.test_client() as client:
